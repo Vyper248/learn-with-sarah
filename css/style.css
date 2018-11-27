@@ -236,6 +236,7 @@ header {
 
 .menu > .basicBtn.icon {
     width: 50px;
+    font-size: 1.2em;
 }
 
 .menu a {
