@@ -146,7 +146,88 @@ td {
     }
 }
 
+/*============================LOGO============================*/
+
+.logo {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    position: relative;
+    transform: scale(1.2);
+    margin-right: 20px;
+}
+
+.logo * {
+    border-top: 29px solid #BDE1E5;
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+    width: 0px;
+    height: 0px;
+    transform-origin: bottom;
+    position: absolute;
+    left: 25%;
+    top: 5px;
+    animation: fadeIn 0.3s linear;
+    animation-fill-mode: both;
+}
+
+.logo div:nth-child(1) {
+    transform: rotate(30deg);
+}
+
+.logo div:nth-child(2) {
+    transform: rotate(90deg);
+    animation-delay: 0.1s;
+}
+
+.logo div:nth-child(3) {
+    transform: rotate(150deg);
+    border-top-color: #22A3AA;
+    animation-delay: 0.2s;
+}
+
+.logo div:nth-child(4) {
+    transform: rotate(210deg);
+    border-top-color: #22A3AA;
+    animation-delay: 0.3s;
+}
+
+.logo div:nth-child(5) {
+    transform: rotate(270deg);
+    border-top-color: #6FCBCD;
+    animation-delay: 0.4s;
+}
+
+.logo div:nth-child(6) {
+    transform: rotate(330deg);
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideIn {
+    from {opacity: 0; transform: translate(20%); filter: blur(30px)}
+    to {opacity: 1; transform: none}
+}
+
 /*===========================HEADER===========================*/
+
+.heading {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.heading span {
+    animation: slideIn 0.4s linear 0.5s;
+    animation-fill-mode: both;
+    font-family: sans-serif;
+    font-variant: small-caps;
+    text-align: left;
+}
 
 header {
     background-image: url(http://www.genlish.com/learn-english/wp-content/uploads/2017/03/feature-landing_tcm32-288767.jpg);
@@ -696,7 +777,7 @@ footer .divider {
 /* ===================RESPONSIVE STYLING=================== */
 
 /* Responsive Menu */
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 570px) {    
     .mobile {
         display: flex !important;
     }
