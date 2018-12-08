@@ -17,8 +17,10 @@ async function createNavbar() {
     const header = doc.querySelector('#header').content.cloneNode(true);
     document.querySelector('header').append(header);
 
-    const navbtn = document.querySelector('#navbar a[href="'+thisPage+'"]');
-    if (navbtn) navbtn.classList.add('selected');
+    const navbtn = document.querySelectorAll('#navbar a[href="'+thisPage+'"]');
+    Array.from(navbtn).forEach(btn => {
+        btn.classList.add('selected');
+    });
 
     addComingSoonLinks();
     setupMenuEvents();

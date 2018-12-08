@@ -148,6 +148,16 @@ td {
 
 /*============================LOGO============================*/
 
+.headingHidden {
+    overflow: hidden;
+}
+
+.headingText {
+/*    transform: translateX(-100px);*/
+    position: relative;
+    transition: 0.3s;
+}
+
 .logo {
     width: 70px;
     height: 70px;
@@ -222,7 +232,7 @@ td {
 }
 
 .heading span {
-    animation: slideIn 0.4s linear 0.5s;
+    animation: slideIn 0.5s linear;
     animation-fill-mode: both;
     font-family: sans-serif;
     font-variant: small-caps;
