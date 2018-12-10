@@ -1,10 +1,13 @@
 async function createNavbar() {
     const matches = document.location.href.match(/[a-zA-Z]+.html/g);
     const en = document.location.href.includes('/en/');
+    const github = document.location.href.includes('github.io');
     const thisPage = matches ? matches[0] : '';
     
-    let templateURL = '/templates.html';
-    if (en) templateURL = '/en/templates.html';
+    let root = '';
+    if (github) root = '/learn-with-sarah';
+    let templateURL = root+'/templates.html';
+    if (en) templateURL = root+'/en/templates.html';
     const response = await fetch(templateURL);
     const templates = await response.text();
     const parser = new DOMParser();
