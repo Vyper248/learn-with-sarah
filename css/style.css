@@ -150,12 +150,19 @@ td {
 
 .headingHidden {
     overflow: hidden;
+    position: relative;
+    left: -55px;
 }
 
 .headingText {
-/*    transform: translateX(-100px);*/
+    transform: translateX(-100px);
     position: relative;
     transition: 0.3s;
+/*    animation: slideIn 0.5s linear 0.6s;*/
+    animation-fill-mode: both;
+    font-family: sans-serif;
+    font-variant: small-caps;
+    left: 55px;
 }
 
 .logo {
@@ -165,6 +172,7 @@ td {
     position: relative;
     transform: scale(1.2);
     margin-right: 20px;
+    z-index: 5;
 }
 
 .logo * {
@@ -219,8 +227,8 @@ td {
 }
 
 @keyframes slideIn {
-    from {opacity: 0; transform: translate(20%); filter: blur(30px)}
-    to {opacity: 1; transform: none}
+    from {left: -800px; opacity: 0; filter: blur(5px)}
+    to {left: 55px; opacity: 1 filter: none}
 }
 
 /*===========================HEADER===========================*/
@@ -229,14 +237,6 @@ td {
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;
-}
-
-.heading span {
-    animation: slideIn 0.5s linear;
-    animation-fill-mode: both;
-    font-family: sans-serif;
-    font-variant: small-caps;
-    text-align: left;
 }
 
 header {

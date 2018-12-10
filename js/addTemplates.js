@@ -3,7 +3,9 @@ async function createNavbar() {
     const en = document.location.href.includes('/en/');
     const thisPage = matches ? matches[0] : '';
     
-    const response = await fetch('templates.html');
+    let templateURL = '/templates.html';
+    if (en) templateURL = '/en/templates.html';
+    const response = await fetch(templateURL);
     const templates = await response.text();
     const parser = new DOMParser();
     const doc = parser.parseFromString(templates, 'text/html');
