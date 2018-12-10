@@ -9,31 +9,75 @@
     <link rel="stylesheet" type="text/css" href="css/farsiStyle.css">
     <link rel="stylesheet" type="text/css" href="css/subPages.css">
     <style>
-        .purchaseGrid {
-            width: 27vw;
-            height: 27vw;
-        }
-        .purchaseGroup {
-            max-width: 795px;
-        }
-        
-        iframe {
-            margin: auto !important;
-        }
-        
         .blogGrid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr;
-            grid-gap: 5px;
+            grid-gap: 20px;
+            margin: 0px 20px;
+        }
+        
+        .blogSummary {
+            border: 1px solid var(--mainColor);
+            margin-top: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blogSummary:first-child {
+            margin-top: 0px;
+        }
+        
+        .blogSummary h2 {
+            background: var(--mainColor);
+            margin: 0px;
+            font-size: 1.5em;
+            padding: 5px;
+        }
+        
+        .blogSummary p {
+            padding: 10px;
+            margin: 0px;
         }
         
         .blogLink {
-            border: 1px solid black;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
         }
         
-        .blogLink h2 {
-            background: var(--mainColor);
+        .blogLink a {
+            border-top: 1px solid var(--mainColor);
+            width: 100%;
+            padding: 5px 10px;
+            transition: 0.3s;
+            cursor: pointer;
+            text-align: center;
+            background-color: var(--mainColor);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .blogLink a:hover {
+            background-color: var(--buttonHoverColor);
+        }
+        
+        .blogSummary img {
+            width: 100%;
+        }
+        
+        .blogContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        @media screen and (max-width: 900px){
+            .blogGrid {
+                grid-template-columns: auto;
+            }
         }
         
     </style>
@@ -53,16 +97,66 @@
         
         <div class="blogGrid">
         
-            <div class="blogLink">
-                <h2>Learning Stuff</h2>
+            <div class="blogContainer">
+                <div class="blogSummary">
+                    <h2>Learning Stuff</h2>
+                    <img src="/images/learningPlan.png">
+                    <p>Today I'd like to discuss learning</p>
+                    <p>!?We can include a photo if we want to, cool right</p>
+                    <div class="blogLink">
+                         <a>?Link here</a>
+                    </div>
+                </div>
             </div>
             
-            <div class="blogLink">
-
+            <div class="blogContainer">
+                <div class="blogSummary">
+                    <h2>Learning Stuff That You Would Not Believe, and a Really Long Title to See How it Looks</h2>
+                    <p>Today I'd like to discuss learning something else</p>
+                    <p>Something amazing</p>
+                    <p>Something you never thought you'd ever learn</p>
+                    <p>It'll blow your mind</p>
+                    <div class="blogLink">
+                         <a>Error - Content Not Found</a>
+                    </div>
+                </div>
+                <div class="blogSummary">
+                    <h2>Just a Small Update</h2>
+                    <p>A quick update to let you all know what awesome things I've been up to recently. Also, this is an example of two blog links together if wanted, like if there's a big image in the one next to it</p>
+                    <div class="blogLink">
+                         <a>?Update Here</a>
+                    </div>
+                </div>
             </div>
             
-            <div class="blogLink">
-
+            <div class="blogContainer">
+                <div class="blogSummary">
+                    <h2>Lets Watch Some Movies</h2>
+                    <p>Watching English movies is a great way to learn. I would recommend any Marvel movie, which are clearly the best</p>
+                    <div class="blogLink">
+                         <a>Click here for Awesome Marvel movies</a>
+                    </div>
+                </div>
+                
+                <div class="blogSummary">
+                    <h2>Lets Watch Some TV</h2>
+                    <p>Watching English tv series is a great way to learn. I would recommend any DC TV Series, especially The Flash and Arrow</p>
+                    <div class="blogLink">
+                         <a>Click here for Awesome DC series</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blogContainer">
+                <div class="blogSummary">
+                    <h2>How to Make a Plan</h2>
+                    <img src="/images/fullCircle.png">
+                    <p>I'm just kidding, but if you want a plan, you're welcome to check out my Plans service</p>
+                    <div class="blogLink">
+                         <a>Find Plans Here</a>
+                    </div>
+                    
+                </div>
             </div>
         
         </div>

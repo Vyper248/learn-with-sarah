@@ -25,6 +25,11 @@ body {
     font-size: 14px;
 }
 
+/*For Instagram Embedding*/
+iframe {
+    margin: auto !important;
+}
+
 p {
     margin-top: 0px;
     line-height: 1.5;
