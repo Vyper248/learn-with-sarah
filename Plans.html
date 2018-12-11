@@ -9,12 +9,25 @@
     <link rel="stylesheet" type="text/css" href="css/farsiStyle.css">
     <link rel="stylesheet" type="text/css" href="css/subPages.css">
     <style>
-        .purchaseGrid {
-            width: 27vw;
-            height: 27vw;
-        }
+        
         .purchaseGroup {
-            max-width: 795px;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 25px;
+            max-width: 700px;
+        }
+        
+        @media screen and (max-width:950px) {    
+            .purchaseGroup {
+                width: 90%;
+            }
+        }
+        
+        @media screen and (max-width:550px) {    
+            .purchaseGroup {
+                grid-template-columns: 1fr;
+                width: 70%;
+                grid-gap: 25px;
+            }
         }
         
     </style>
@@ -57,9 +70,7 @@
             </div>
         </div>
 
-    </div>
-           
-    
+    </div>    
     
     <!-- Placeholder for footer template -->
     <div id="footerDiv"></div>
