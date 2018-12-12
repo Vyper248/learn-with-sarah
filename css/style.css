@@ -1103,7 +1103,7 @@ footer .divider {
     transition: 0.3s;
     cursor: pointer;
     text-align: center;
-    background-color: white;;
+    background-color: lightgray;
     color: black;
 }
 
