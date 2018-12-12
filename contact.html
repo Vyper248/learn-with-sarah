@@ -17,10 +17,10 @@
     
     
     <!-- Placeholder for header -->
-    <header></header>
+    <header><?php include 'templates/header.html'; ?></header>
     
     <!--  Placeholder for navbar  -->
-    <div id="navbar"></div>       
+    <div id="navbar"><?php include 'templates/navbar.html'; ?></div>     
     
     <div class="container">
         
@@ -37,7 +37,7 @@
                      <form method="POST" action="email.php">
                          <input type="text" placeholder="Your Email" name="email" required>
                         <textarea rows="10" placeholder="Message" name="message" required></textarea>
-                        <input type="بفرست" />
+                        <input type="submit" value="بفرست" />
                     </form>
                 </div>
             </div>
@@ -66,7 +66,7 @@
     </div>
     
     <!-- Placeholder for footer template -->
-    <div id="footerDiv"></div>
+    <div id="footerDiv"><?php include 'templates/footer.html'; ?></div>
         
     <script src="js/addTemplates.js"></script>
     

@@ -2,26 +2,30 @@ async function createNavbar() {
     const matches = document.location.href.match(/[a-zA-Z]+.html/g);
     const en = document.location.href.includes('/en/');
     const github = document.location.href.includes('github.io');
+    const local = document.location.href.includes('127.0.0.1');
     const thisPage = matches ? matches[0] : '';
     
-    let root = '';
-    if (github) root = '/learn-with-sarah';
-    let templateURL = root+'/templates.html';
-    if (en) templateURL = root+'/en/templates.html';
-    const response = await fetch(templateURL);
-    const templates = await response.text();
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(templates, 'text/html');
-    
-    const navbar = doc.querySelector('#navbar').content.cloneNode(true);
-    document.querySelector('#navbar').append(navbar);
-    
-    const footer = doc.querySelector('#footer').content.cloneNode(true);
-    document.querySelector('#footerDiv').append(footer);
-    
-    const header = doc.querySelector('#header').content.cloneNode(true);
-    document.querySelector('header').append(header);
+    if (github || local){
+        console.log('test');
+        let root = '';
+        if (github) root = '/learn-with-sarah';
+        let templateURL = root+'/templates.html';
+        if (en) templateURL = root+'/en/templates.html';
+        const response = await fetch(templateURL);
+        const templates = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(templates, 'text/html');
 
+        const navbar = doc.querySelector('#navbar').content.cloneNode(true);
+        document.querySelector('#navbar').append(navbar);
+
+        const footer = doc.querySelector('#footer').content.cloneNode(true);
+        document.querySelector('#footerDiv').append(footer);
+
+        const header = doc.querySelector('#header').content.cloneNode(true);
+        document.querySelector('header').append(header);
+    }
+    
     const navbtn = document.querySelectorAll('#navbar a[href="'+thisPage+'"]');
     Array.from(navbtn).forEach(btn => {
         btn.classList.add('selected');
